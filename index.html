@@ -48,7 +48,7 @@
  
 
 }
-
+ 
   
     /* Media query for mobile devices */
     @media only screen and (max-width: 500px) {
@@ -63,6 +63,94 @@
             width: 100%;
                          
         }
+        div.wrapper{
+              top: 18rem;
+              
+  width: 100%;
+  height: 100%;
+ 
+  background-color: wheat;
+  z-index: 99999;
+        }
+        div.circlee {
+     
+     width: 20px;
+     height: 20px;
+     position: absolute;
+     border-radius: 50%;
+     background-color: #fff;
+     left: 12%;
+     transform-origin: 50%;
+     animation: circle7124 .5s alternate infinite ease;
+   }
+   div.shadow {
+            width: 20px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.9);
+            position: absolute;
+            top: 62px;
+            transform-origin: 50%;
+            z-index: -1;
+            left: 12%;
+            filter: blur(1px);
+            animation: shadow046 .5s alternate infinite ease;
+}
+   div.shadow:nth-child(4) {
+  left: 33%;
+  animation-delay: .2s
+}
+
+div.shadow:nth-child(5) {
+  left: auto;
+  right: 41%;
+  animation-delay: .3s;
+}
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scaleX(.2);
+    opacity: .4;
+  }
+}
+   @keyframes circle7124 {
+     0% {
+       
+       top: 60px;
+       height: 5px;
+       border-radius: 50px 50px 25px 25px;
+       transform: scaleX(1.7);
+     }
+   
+     40% {
+       height: 20px;
+       border-radius: 50%;
+       transform: scaleX(1);
+     }
+   
+     100% {
+       top: 0%;
+     }
+   }
+   div.circlee:nth-child(2) {
+  left: 33%;
+  animation-delay: .2s;
+}
+
+div.circlee:nth-child(3) {
+  left: auto;
+  right:41%;
+  animation-delay: .3s;
+}
+
         div.Top-title
         {
           
@@ -75,7 +163,7 @@
         .swiper-slide.card
         {
             width: 390px;
- height: 328px;
+            height: 328px;
  
  background-color: #F8FBFE;
  border-radius: 8px;
@@ -227,15 +315,140 @@
     transition: transform .3s;
     box-shadow: 5px 5px 5px #ffbd44, -5px -5px 5px #2A90D6; 
 }
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+  
+    width: 100%;
+    height: 100%;
+}
+ 
+.parent{
+    background-color: wheat;
+    width: 100%;
+  height: 100%;
+  position: fixed;
+ 
+  background-color: wheat;
+  z-index: 99999;
+    z-index: 99999;
+}
+.wrapper {
+    top: 18rem;
+    left: 4rem;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: wheat;
+  z-index: 99999;
+  
+ 
+}
+
+.circlee {
+      
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 39%;
+  transform-origin: 50%;
+  animation: circle7124 .5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+    
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+.circlee:nth-child(2) {
+  left: 45%;
+  animation-delay: .2s;
+}
+
+.circlee:nth-child(3) {
+  left: auto;
+  right:48%;
+  animation-delay: .3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 39%;
+  filter: blur(1px);
+  animation: shadow046 .5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scaleX(.2);
+    opacity: .4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: .2s
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 48%;
+  animation-delay: .3s;
+}
 
  
     </style>
 </head>
 <body>
+    <div class="parent">
+    <div class="wrapper">
+        <div class="circlee"></div>
+        <div class="circlee"></div>
+        <div class="circlee"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div>
+</div>
+     
     <div class="container-fluid cont">
+        
         <div  
         class="banner"
-        style="background-image: url('/4f.jpg')"
+        style="background-image: url('images/4f.jpg')"
       >
         <div class="Top-title">
             <p data-aos="fade-left" data-aos-delay="500" data-aos-duration="700">
@@ -265,7 +478,7 @@
                 <span class="green box"></span>
             </div>
             </div>
-            <div class="card__content"><img src="1.jpg" id="imgg" alt=""     >
+            <div class="card__content"><img src="images/1.jpg" id="imgg" alt=""     >
             </div>
         </div>
 </swiper-slide>
@@ -282,7 +495,7 @@
             <span class="green box"></span>
         </div>
         </div>
-        <div class="card__content"><img src="2.jpg" id="imgg" alt=""     >
+        <div class="card__content"><img src="images/2.jpg" id="imgg" alt=""     >
         </div>
     </div>
 </swiper-slide>
@@ -299,7 +512,7 @@
             <span class="green box"></span>
         </div>
         </div>
-        <div class="card__content"><img src="3.jpg" id="imgg" alt=""     >
+        <div class="card__content"><img src="images/3.jpg" id="imgg" alt=""     >
         </div>
     </div>
 </swiper-slide>
@@ -316,7 +529,7 @@
             <span class="green box"></span>
         </div>
         </div>
-        <div class="card__content"><img src="4.jpg" id="imgg" alt=""     >
+        <div class="card__content"><img src="images/4.jpg" id="imgg" alt=""     >
         </div>
     </div>
 </swiper-slide>
@@ -334,7 +547,7 @@
             <span class="green box"></span>
         </div>
         </div>
-        <div class="card__content"><img src="6.jpg" id="imgg" alt=""     >
+        <div class="card__content"><img src="images/6.jpg" id="imgg" alt=""     >
         </div>
     </div>
 </swiper-slide>
@@ -351,7 +564,7 @@
             <span class="green box"></span>
         </div>
         </div>
-        <div class="card__content"><img src="7.jpg" id="imgg" alt=""     >
+        <div class="card__content"><img src="images/7.jpg" id="imgg" alt=""     >
         </div>
     </div>
 </swiper-slide>
@@ -368,7 +581,7 @@
             <span class="green box"></span>
         </div>
         </div>
-        <div class="card__content"><img src="8.jpg" id="imgg" alt=""     >
+        <div class="card__content"><img src="images/8.jpg" id="imgg" alt=""     >
         </div>
     </div>
 </swiper-slide>
@@ -385,7 +598,7 @@
             <span class="green box"></span>
         </div>
         </div>
-        <div class="card__content"><img src="9.jpg" id="imgg" alt=""     >
+        <div class="card__content"><img src="images/9.jpg" id="imgg" alt=""     >
         </div>
     </div>
 </swiper-slide>
@@ -402,7 +615,7 @@
             <span class="green box"></span>
         </div>
         </div>
-        <div class="card__content"><img src="10.jpg" id="imgg" alt=""     >
+        <div class="card__content"><img src="images/10.jpg" id="imgg" alt=""     >
         </div>
     </div>
 </swiper-slide>
@@ -418,7 +631,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 </body>
   
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.parent').fadeToggle();
+        }, 2000);
+    </script>
 <script>
     var swiper = new Swiper(".mySwiper", {
        
